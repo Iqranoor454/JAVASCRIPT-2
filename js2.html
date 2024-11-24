@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 350px;
+            width: 250px;
+            border: 3px solid black;
+            padding-left: 20px;
+            margin-left: 350px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>ASSIGNMENT 2</h1>
+    <h2>Addition</h2>
+        <label for="" >Enter number 1</label>
+        <input type="number" id="num1"><br><br>
+        <label for="">Enter number 2</label><br>
+        <input type="number" id="num2"><br><br>
+        <button onclick="sum()">Submit</button>
+        <p id="addition"></p>
+    </div>
+    
+    <script>
+        function sum(){
+            var add=document.getElementById("num1").value;
+            var total=document.getElementById("num2").value;
+            var result=parseInt(add)+parseInt(total);
+            document.getElementById("addition").innerHTML="The sum of two numbers is " +result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age Validator</title>
+  <style>
+    div{
+            border: 2px solid black;
+            margin-left: 400px;
+            margin-top: 70px;
+            height: 200px;
+            width: 200px;
+            padding: 5px;
+        }
+  </style>
+</head>
+<body>
+    <div>
+  <h1>Age Validator</h1>
+  <input type="number" id="age" >
+  <br><br>
+  <button onclick="validateAge()">check</button><br>
+  <p id="result"></p>
+    </div>
+<script>
+function validateAge() {
+  let age = Number(document.getElementById("age").value);
+
+  if (age < 18) {
+    document.getElementById("result").innerHTML = "You are a minor.";
+  } else if (age >= 18 && age < 65) {
+    document.getElementById("result").innerHTML = "You are an adult.";
+  } else {
+    document.getElementById("result").innerHTML = "You are a senior citizen.";
+  }
+}
+</script>
+</body>
+</html>
